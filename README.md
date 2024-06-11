@@ -1,5 +1,4 @@
-# Online-Resume
-Created with CodeSandbox
+# Online-Resum
 
 :sunglasses: You can now view this site at [ericwcarey.com](https://ericwcarey.com) !!
 
