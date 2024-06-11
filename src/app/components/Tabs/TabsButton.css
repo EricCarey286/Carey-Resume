@@ -1,0 +1,44 @@
+li {
+  list-style-type: none;
+}
+
+.tab-container p {
+  margin: 0;
+}
+
+.tab {
+  padding: 0.75rem;
+  background-color: transparent;
+  color: #e0e8e2;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: #e0e8e2 1px solid;
+  border-radius: 10px;
+}
+
+.tab:hover {
+  background-color: #89c07e;
+  color: #2a3f3f;
+}
+
+.tab h3 {
+  margin: 0;
+}
+
+.tab code {
+  font-size: 3rem;
+}
+
+.not-selected {
+  display: none;
+}
+
+.active {
+  border: 3px solid #467750;
+  border-radius: 10px;
+}

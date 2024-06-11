@@ -1,0 +1,47 @@
+.concept {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(#293f3f, #467750);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 -5px 30px #467750;
+  width: 50%;
+  transition: all 0.2s;
+}
+
+.concept img {
+  width: 6rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.concept h2 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.concept p {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.concept a {
+  color: #ebe7ef;
+  font-weight: bold;
+}
+
+.concept a:hover {
+  color: #2a3f3f;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .concept {
+    width: 100%;
+  }
+}

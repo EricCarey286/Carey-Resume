@@ -1,0 +1,23 @@
+#tab-content {
+  align-items: center;
+  background: #467750;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba (240, 205, 110, 0.2);
+  width: 100%;
+  transition: all 0.2s;
+}
+
+#tab-content h3 {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.title {
+  float: left;
+}
+
+.title-date {
+  float: right;
+  font-style: italic;
+}

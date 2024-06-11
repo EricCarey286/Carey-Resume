@@ -1,0 +1,5 @@
+dark = #2a3f3f
+medium = #467750
+light = #89c07e
+grey = #e0e8e2
+yellow = #e0e8e2
