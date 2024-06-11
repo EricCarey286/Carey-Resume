@@ -43,7 +43,7 @@ export default function Contact() {
   }
 
   return (
-    <Section id="contact" title="Contact">
+    <Section title="Contact">
       <div id="contact-div">
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <h3>Contact Me</h3>
