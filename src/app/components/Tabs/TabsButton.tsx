@@ -1,6 +1,13 @@
+import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 import "./TabsButton.css";
 
-function TabsButton({ children, iSelected, tabContent, ...props }) {
+interface TabsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  iSelected: boolean;
+  tabContent: ReactNode;
+}
+
+const TabsButton: React.FC<TabsButtonProps> = ({ children, iSelected, tabContent, ...props }) => {
   return (
     <li className="tab-container">
       <button className={iSelected ? "tab active" : "tab"} {...props}>
@@ -14,3 +21,4 @@ function TabsButton({ children, iSelected, tabContent, ...props }) {
 }
 
 export default TabsButton;
+
