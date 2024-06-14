@@ -7,7 +7,7 @@
   gap: 1.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 925px) {
   #concepts {
     max-width: 100%;
     padding: 1rem;

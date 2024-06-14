@@ -13,3 +13,9 @@ body {
   color: #ebe7ef;
   max-width: 100%;
 }
+
+button, 
+input, 
+textarea {
+    font-family: inherit;
+}

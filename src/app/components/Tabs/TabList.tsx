@@ -1,22 +1,18 @@
-import React, { ReactNode, ElementType } from 'react';
+import React from "react";
 
 interface TabListProps {
-  children: ReactNode;
-  buttons: ReactNode;
-  ButtonsContainer?: ElementType; // Allows any HTML element or custom component
+  ButtonsContainer: React.ElementType;
+  buttons: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const TabList: React.FC<TabListProps> = ({
-  children,
-  buttons,
-  ButtonsContainer = "menu"
-}) => {
+const TabList: React.FC<TabListProps> = ({ ButtonsContainer, buttons, children }) => {
   return (
-    <>
+    <div className="tab-contaniner">
       <ButtonsContainer>{buttons}</ButtonsContainer>
-      {children}
-    </>
+      <div className="tab-content">{children}</div>
+    </div>
   );
-}
+};
 
 export default TabList;

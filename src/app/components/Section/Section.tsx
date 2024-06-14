@@ -3,14 +3,15 @@ import "./Section.css";
 
 interface SectionProps {
   id?: string,
-  title?: string;
+  title?: string,
+  heading?: string;
   children: ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ title, children, ...props }) => {
+const Section: React.FC<SectionProps> = ({ title, heading, children, ...props }) => {
   return (
-    <section {...props}>
-      { title ? <h2>{title}</h2> : null }
+    <section {...props} title={title}>
+      { heading ? <h2>{heading}</h2> : null }
       {children}
     </section>
   );

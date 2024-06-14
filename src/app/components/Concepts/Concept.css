@@ -1,5 +1,6 @@
 .concept {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -10,17 +11,19 @@
   box-shadow: 0 -5px 30px #467750;
   width: 50%;
   transition: all 0.2s;
+  text-align: center;
 }
 
 .concept img {
-  width: 6rem;
+  width: 10rem;
   height: 5rem;
   object-fit: contain;
 }
 
 .concept h2 {
-  margin: 0;
+  margin: 1rem 0;
   font-size: 1rem;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -40,7 +43,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 925px) {
   .concept {
     width: 100%;
   }

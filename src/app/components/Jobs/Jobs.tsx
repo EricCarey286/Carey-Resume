@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import "./Jobs.css";
 import TabsButton from "../Tabs/TabsButton";
 import TabList from "../Tabs/TabList";
@@ -17,8 +17,8 @@ interface Job {
 export default function Jobs() {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
-  function handleSelect(selectedButton: Job, currentJob: Job | null) {
-    if (selectedButton === currentJob) {
+  function handleSelect(selectedButton: Job) {
+    if (selectedButton === selectedJob) {
       setSelectedJob(null);
     } else {
       setSelectedJob(selectedButton);
@@ -41,31 +41,29 @@ export default function Jobs() {
   }
 
   return (
-    <>
-      <Section title="Job History" id="examples">
-        <p>Select a position to learn more.</p>
-        <TabList
-          ButtonsContainer="div"
-          buttons={
-            <>
-              {EXAMPLES.map((job) => (
-                <TabsButton
-                  key={job.nickname}
-                  onClick={() => handleSelect(job, selectedJob)}
-                  iSelected={selectedJob === job}
-                  tabContent={tabContent}
-                >
-                  <span className="title">{job.company}</span>
-                  <span className="title-date">{job.date}</span>
-                </TabsButton>
-              ))}
-            </>
-          }
-        >
-          {tabContent}
-        </TabList>
-      </Section>
-    </>
+    <Section title="Job History" heading="Job History" id="examples">
+      <p>Select a position to learn more.</p>
+      <TabList
+        ButtonsContainer="div"
+        buttons={
+          <>
+            {EXAMPLES.map((job) => (
+              <TabsButton
+                key={job.nickname}
+                onClick={() => handleSelect(job)}
+                iSelected={selectedJob === job}
+                tabContent={tabContent}
+              >
+                <span className="title">{job.company}</span>
+                <span className="title-date">{job.date}</span>
+              </TabsButton>
+            ))}
+          </>
+        }
+      >
+      </TabList>
+    </Section>
   );
 }
+
 

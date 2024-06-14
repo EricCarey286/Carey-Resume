@@ -31,6 +31,11 @@ textarea {
   border-color: #ebe7ef;
 }
 
+textarea {
+  max-width: 100%;
+  resize: vertical;
+}
+
 .submit {
   margin-top: 10px;
   padding: 10px;
@@ -53,12 +58,6 @@ textarea {
 
 .contact-error {
   color: red;
-}
-
-@media (min-width: 1001px) {
-  .contact-form {
-    max-width: 50%;
-  }
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
