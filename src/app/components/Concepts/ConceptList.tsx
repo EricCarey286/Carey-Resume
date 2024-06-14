@@ -15,6 +15,7 @@ const ConceptList: React.FC = () => {
             title={conceptItem.title}
             description={conceptItem.description}
             link={conceptItem.link}
+            linkText={conceptItem.linkText}
           />
         ))}
       </ul>
