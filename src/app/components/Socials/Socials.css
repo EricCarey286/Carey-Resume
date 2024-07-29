@@ -4,7 +4,7 @@
   align-items: center;
   gap: 1rem;
 }
-a img {
+.socials a img {
   margin: 10px;
   max-width: 25px;
 }
