@@ -1,0 +1,46 @@
+.yt-slider-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.yt-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.yt-slider li {
+  list-style: none;
+  flex: auto;
+  margin-right: 10px;
+  background-color: #467750;
+  border-radius: 5px;
+}
+
+.yt-slider li :hover{
+  color: #2B3E3F;
+}
+
+.yt-slider li a {
+  color: #ebe7ef;
+  text-decoration: none;
+}
+
+.yt-slider-img {
+  margin-top: -16px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.yt-slider-title {
+  padding: 0 10px;
+}

@@ -1,4 +1,4 @@
-# Online-Resum
+# My Online Resume
 
 :sunglasses: You can now view this site at [ericwcarey.com](https://ericwcarey.com) !!
 

@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
 import "./globals.css";
-
-const quicksand = Quicksand({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Eric W Carey Resume",
@@ -17,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={quicksand.className}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
