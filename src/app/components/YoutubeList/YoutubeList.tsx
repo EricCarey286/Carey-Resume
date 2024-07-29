@@ -8,7 +8,7 @@ const headshot = "/images/headshot.jpg";
 
 async function getData() {
   const res = await fetch(
-    `${YOUTUBE_PLAYLIST_API}?part=snippet&maxResults=10&playlistId=PLMvVU3l5gyKWcAGstohdAaMC6dPUttMIb&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&maxResults=10&playlistId=PLMvVU3l5gyKWcAGstohdAaMC6dPUttMIb&key=${process.env.YOUTUBE_API_KEY}&timestamp=${new Date().getTime()}`
   );
   return res.json();
 }
