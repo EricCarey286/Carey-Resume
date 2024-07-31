@@ -29,7 +29,6 @@ export default async function YoutubeList() {
             const { id, snippet = {} } = item;
             const { title, thumbnails = {}, resourceId } = snippet;
             const { medium = {} } = thumbnails;
-            //console.log(`snippet =  ${JSON.stringify(snippet)}`)
             return (
               <li key={id} className="yt-list-item">
                 <a
