@@ -6,16 +6,20 @@ const YOUTUBE_PLAYLIST_API =
 
 const headshot = "/images/headshot.jpg";
 
+export const config = {
+  fetchCache: 'force-no-store'
+};
+
 async function getData() {
   const res = await fetch(
-    `${YOUTUBE_PLAYLIST_API}?part=snippet&maxResults=10&playlistId=PLMvVU3l5gyKWcAGstohdAaMC6dPUttMIb&key=${process.env.YOUTUBE_API_KEY}&timestamp=${new Date().getTime()}`
-  );
+    `${YOUTUBE_PLAYLIST_API}?part=snippet&maxResults=10&playlistId=PLMvVU3l5gyKWcAGstohdAaMC6dPUttMIb&key=${process.env.YOUTUBE_API_KEY}&timestamp=${new Date().getTime()}`, {
+     cache: 'no-store'
+});
   return res.json();
 }
 
 export default async function YoutubeList() {
   const data = await getData();
-  console.log(data);
   return (
     <Section
       title="Youtube Top 10 of the Week"
