@@ -6,6 +6,10 @@ const YOUTUBE_PLAYLIST_API =
 
 const headshot = "/images/headshot.jpg";
 
+export const config = {
+  fetchCache: 'force-no-store'
+};
+
 export const fetchCache = 'force-no-store';
 
 async function getData() {

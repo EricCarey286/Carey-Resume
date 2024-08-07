@@ -23,7 +23,7 @@ export const CORE_CONCEPTS: CoreConcept[] = [
     title: "React",
     description:
       "This website is built with React. The project aims to highlight my skills and understanding of the React framework. For more information please explore the repo here: ",
-    link: "https://github.com/ericcarey286/online-resume", 
+    link: "https://github.com/ericcarey286/carey-resume", 
     linkText: "EC Online Resume",
   },
   {
@@ -51,10 +51,27 @@ interface Example {
 
 export const EXAMPLES: Example[] = [
   {
+    nickname: "devops",
+    title: "Software Engineer",
+    company: "Dell Technologies - DevSecOps",
+    date: "Apr. 2024 - Present",
+    description:
+      "As a member of the DevSecOps team at Dell, I work on a vulnerability dashboard utitilized by internal application owners. I specifically monitor our data loads using MS SQL and SSIS. My role also includes assisting in the design of our dashboard using Figma and eventually developing the interface with a React/NodeJS stack. ",
+    code: `
+MS SQL
+Figma
+React
+Node.JS
+Swagger
+JavaScript / TypeScript
+Architecture
+Documentation`,
+  },
+  {
     nickname: "dell",
     title: "Software Engineer",
-    company: "Dell Technologies",
-    date: "Sep. 2021 - Present",
+    company: "Dell Technologies - ServiceNow",
+    date: "Sep. 2021 - Apr. 2024",
     description:
       "As a Software Engineer with Dell, I work on a team responsible for the building on the ServiceNow platform for our Managed Services offerings. My main area of focus is the frontend Service Portal, building custom APIs and widgets using Angular and built in ServiceNow libraries. I also assist in the backend creating catalogs and server side scripts to control the flow of information for the ITSM staff. My second major responsibility is assisting the DevOps team's production support and on call schedule, aiding customers and other teams when using our platform.",
     code: `

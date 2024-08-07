@@ -11,7 +11,7 @@ export default function Header() {
       <Image id="headshot" src={headshot} alt="Eric W Carey Headshot" width={200} height={200}/>
       <h1>Eric W Carey</h1>
       <p>Software Engineer</p>
-      <p>Specializing in Frontend Development</p>
+      <p>Specializing in Fullstack Development</p>
       <Socials />
     </header>
   );
