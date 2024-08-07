@@ -23,7 +23,7 @@ export const CORE_CONCEPTS: CoreConcept[] = [
     title: "React",
     description:
       "This website is built with React. The project aims to highlight my skills and understanding of the React framework. For more information please explore the repo here: ",
-    link: "https://github.com/ericcarey286/online-resume", 
+    link: "https://github.com/ericcarey286/carey-resume", 
     linkText: "EC Online Resume",
   },
   {
