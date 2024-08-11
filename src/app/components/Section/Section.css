@@ -5,9 +5,10 @@ section {
 section h2 {
   text-align: left;
 }
-@media (min-width: 1001px) {
+
+@media (min-width: 1001px) {
   section {
-    max-width: 50%;
+    max-width: 75%;
   }
 }
 
