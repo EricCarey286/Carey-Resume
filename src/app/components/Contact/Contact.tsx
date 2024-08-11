@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -29,7 +29,7 @@ export default function Contact() {
       (error) => {
         validateSuccess(false);
         console.log(error.text);
-      },
+      }
     );
     if (nameRef.current) nameRef.current.value = "";
     if (emailRef.current) emailRef.current.value = "";
@@ -48,39 +48,53 @@ export default function Contact() {
     <Section title="Contact">
       <div id="contact-div">
         <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <h3>Contact Me</h3>
-          <h5>For more information</h5>
-          <label htmlFor="user_name">Name</label>
-          <input
-            ref={nameRef}
-            type="text"
-            name="user_name"
-            id="user_name"
-            className="contact-input"
-            required
-            title="Your full name"
-            placeholder="Enter your name"
-          />
-          <label htmlFor="user_email">Email</label>
-          <input
-            ref={emailRef}
-            type="email"
-            name="user_email"
-            id="user_email"
-            className="contact-input"
-            required
-            title="Your email address"
-            placeholder="Enter your email"
-          />
+          <div className="contact-heading">
+            <h3>Contact Me</h3>
+            <h5>For more information</h5>
+          </div>
+          <div className="input-group">
+            <div className="input-item">
+              <label htmlFor="user_name">Name</label>
+              <input
+                ref={nameRef}
+                type="text"
+                name="user_name"
+                id="user_name"
+                className="contact-input"
+                required
+                title="Your full name"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div className="input-item">
+              <label htmlFor="user_email">Email</label>
+              <input
+                ref={emailRef}
+                type="email"
+                name="user_email"
+                id="user_email"
+                className="contact-input"
+                required
+                title="Your email address"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
           <label htmlFor="message">Message</label>
-          <textarea 
-            id="contact-message" 
-            ref={messageRef} 
+          <textarea
+            id="contact-message"
+            ref={messageRef}
             name="message"
             title="Your message"
             placeholder="Enter your message"
           />
-          <input type="submit" value="Send" className="submit" required title="Send your message" />
+          <input
+            type="submit"
+            value="Send"
+            className="submit"
+            required
+            title="Send your message"
+          />
           {isSuccessful === "success" ? (
             <p className="contact-success "> Your message has been sent</p>
           ) : isSuccessful === "error" ? (
