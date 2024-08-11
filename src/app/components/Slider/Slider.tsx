@@ -1,14 +1,13 @@
 "use client";
+import { ReactNode } from 'react';
 
 import "./Slider.css";
 import { useRef } from "react";
-import { YouTubeApiResponse } from "../../types";
-
 interface SliderProps {
-  data: YouTubeApiResponse;
+  children: ReactNode;
 }
 
-export default function Slider({ data }: SliderProps) {
+export default function Slider({ children }: SliderProps) {
   const sliderRef = useRef<HTMLUListElement>(null); // Create a ref with specific type to control the slider
 
   const scrollToItem = (index: number) => {
@@ -51,24 +50,7 @@ export default function Slider({ data }: SliderProps) {
         <i className="fas fa-chevron-left" title="Prev"></i>
       </button>
       <ul className="slider-ul" ref={sliderRef}>
-        {data.items.map((item: any, index) => {
-          const { id, snippet = {} } = item;
-          const { title, thumbnails = {}, resourceId } = snippet;
-          const { medium = {} } = thumbnails;
-          return (
-            <li key={id} className="slider-li">
-              <a
-                href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                target="_blank"
-              >
-                <p>
-                  <img className="slider-img" src={medium.url} alt={title} />
-                </p>
-                <h3 className="slider-title">{title}</h3>
-              </a>
-            </li>
-          );
-        })}
+        {children}
       </ul>
       <button className="slider-button next" onClick={nextSlide}>
         <i className="fas fa-chevron-right" title="Next"></i>
